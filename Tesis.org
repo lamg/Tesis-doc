@@ -1,8 +1,9 @@
 #+TITLE: Portal de servicios de redes de la Universidad de Pinar del Río
-
 #+AUTHOR: Luis Ángel Méndez Gort
+#+LATEX_CLASS: book
+#+ATTR_LATEX: :font cm
 
-* Capítulo I: Introducción
+* Capítulo 0: Introducción
 
 ** Introducción
 
@@ -116,70 +117,75 @@ información proporcionada por los servicios de red de la Universidad
 de Pinar del Río, contribuyendo a una mejor experiencia de usuario y a
 una mayor seguridad de la red.
 
-Para realizar esta investigación se usarán los siguientes métodos 
+** Métodos científicos
+
+Para realizar la investigación se usarán los siguientes métodos 
 científicos:
 
-*** TODO (personalizar ...) Métodos teóricos
+*** Métodos teóricos
 
 - Inductivo-deductivo: en los procesos de recopilación de los 
   requerimientos, análisis, diseño e implementación del software.
 
-- Histórico: en la revisión de la información referente al tema, 
-  para conocer el estado actual de los servicios TODO.
+- Histórico: en la revisión de la información referente al diseño
+  e implementación de servicios de red similares, para conocer el
+  estado del arte actual.
 
 - Análisis-síntesis: en los procesos de recopilación de los 
   requerimientos, análisis, diseño e implementación del software.
 
-*** TODO (personalizar ...) Métodos empíricos
+*** Métodos empíricos
 
-- Entrevista: en la recopilación de requerimientos del software a 
-  desarrollar TODO (personalizar métodos).
+- Entrevista: en la recopilación de requerimientos para gestionar
+  la información de los servicios de red de la Universidad de Pinar
+  del Río.
 
 - Revisión bibliográfica: en el estudio de los documentos 
   relacionados con el tema.
 
-** TODO (explicar ...) Estructura del trabajo
+** Estructura del trabajo
 
-El siguiente trabajo se va a estructurar en tres capítulos, donde 
-se abordarán los siguientes elementos:
+El trabajo está estructurado en 5 capítulos:
 
-  Capítulo 1: Contextualización de la Dirección de 
-  Informatización de la Universidad de Pinar del Río
+*** Capítulo 0: Introducción.
 
-En este capítulo se realizará una descripción concisa del 
-funcionamiento de la Dirección de Informatización de la 
-Universidad de Pinar del Río, enfocada en el aspecto de la 
-gestión de la información generada por los servicios 
-implementados.
+Introducción al trabajo. En él se da un panorama histórico
+del origen del problema, se define la situación problémica,
+se definen los métodos científicos y la estructura del 
+trabajo.
 
-También se hace un estudio de las tendencias, metodologías y 
-tecnologías actuales relacionadas con la implementación de este 
-software. Además se elige, entre un conjunto amplio de 
-herramientas útiles para realizar este trabajo, la más adecuada; 
-justificando cada decisión.
+*** Capítulo 1: Contextualización de la Dirección de Informatización de la Universidad de Pinar del Río.
 
-  Capítulo 2: Modelo del dominio y sistema
+En este capítulo se realiza una descripción concisa del funcionamiento
+de la Dirección de Informatización de la Universidad de Pinar del Río,
+enfocada en el aspecto de la gestión de la información generada por
+los servicios implementados.
 
-En este capítulo se trata el modelo de dominio y sistema, 
-describiéndose los artefactos de la metodología seleccionada. En 
-el modelo del dominio se definen los conceptos principales y una 
-representación suya. En el sistema se describen los actores, los 
-requerimientos funcionales y los requerimientos no funcionales, 
-el diagrama de casos de uso del sistema y la descripción textual 
-de los principales casos de uso. Finalmente se hace un análisis 
-de factibilidad incluyendo la estimación del costo de desarrollar 
-el software.
+También se hace un estudio de las tendencias, metodologías y
+tecnologías actuales relacionadas con la implementación de este
+software. Además se elige, entre un conjunto amplio de herramientas
+útiles para realizar este trabajo, la más adecuada; justificando cada
+decisión.
 
-  Capítulo 3: Descripción de la solución propuesta
+*** Capítulo 2: Modelo del dominio y sistema
 
-En este capítulo se realizarán diagramas como el diagrama de 
-secuencia, que proporciona un análisis detallado de cada caso de 
-uso, el de clases, el de implementación y el de despliegue.
+En este capítulo se trata el modelo de dominio y sistema,
+describiéndose los artefactos de la metodología seleccionada. En el
+modelo del dominio se definen los conceptos principales y una
+representación suya. En el sistema se describen los actores, los
+requerimientos funcionales y los requerimientos no funcionales, el
+diagrama de casos de uso del sistema y la descripción textual de los
+principales casos de uso. Finalmente se hace un análisis de
+factibilidad incluyendo la estimación del costo de desarrollar el
+software.
 
-Capítulo 0
+*** Capítulo 3: Descripción de la solución propuesta
 
-  Descripción de la entidad (Dirección de Informatización de la 
-  Universidad de Pinar del Río)
+En este capítulo se realizarán diagramas como el diagrama de
+secuencia, que proporciona un análisis detallado de cada caso de uso,
+el de clases, el de implementación y el de despliegue.
+
+* TODO Capítulo 1: Contextualización de la Dirección de Informatización de la Universidad de Pinar del Río
 
 La Dirección de Informatización de la Universidad de Pinar del 
 Río se encarga de la administración e implementación de los 
@@ -189,13 +195,15 @@ red, es decir la parte tangible. Estos trabajadores realizan su
 labor colaborando en ocasiones con los de ETECSA, los encargados 
 de la climatización y los electricistas.
 
-Por otra parte está el grupo de administradores y 
-desarrolladores. Estos se encargan de configurar, desarrollar y 
-administrar el software que permite que la red sea útil para 
-comunicarnos de manera segura. TODO explicar los procesos en el 
+Por otra parte está el grupo de administradores y
+desarrolladores. Estos se encargan de configurar, desarrollar y
+administrar el software que permite que la red sea útil para
+comunicarnos de manera segura.
+
+TODO explicar los procesos en el
 departamento y el proceso que yo voy a hacer
 
-  Herramientas
+**  Herramientas a usar
 
 Las aplicaciones web permiten ser usadas con solo instalar un 
 navegador web en nuestro dispositivo, esto permite que cualquier 
@@ -205,7 +213,7 @@ software es descargado de la red y ejecutado en el ambiente
 seguro de nuestro navegador. Para que esto sea posible se usan 
 las siguientes tecnologías.
 
-  HTML
+*** HTML
 
 HTML un tipo de documento que permite la inclusión de vínculos 
 interactivos a otros documentos en su contenido. Es la 
@@ -214,20 +222,20 @@ Es seleccionado debido a su amplia difusión y al requerimiento de
 integración de este trabajo con aplicaciones e infraestructura ya 
 existentes.
 
-  CSS
+*** CSS
 
 CSS u Hojas de Estilo en Cascada según sus siglas en Inglés, 
 permite la separación de la apariencia y el contenido en una 
 página web. Lo anterior hace posible simplificar el documento 
 HTML sin perder el poder de tener una apariencia adecuada.
 
-  Bootstrap
+*** Bootstrap
 
 Bootstrap es un framework desarrollado por Twitter para hacer más 
 fácil el trabajo con CSS. Contiene tipografías, estilos y 
 plantillas que proporcionan una interfaz atractiva y moderna.
 
-  JavaScript
+*** JavaScript
 
 JavaScript es un lenguaje creado por Brendan Eich para ser 
 ejecutado en los navegadores web, de esa manera los clientes de 
@@ -237,7 +245,7 @@ lenguaje ha sido aceptado como estándar de facto, para la tarea
 descrita, por todos los navegadores web importantes como Internet 
 Explorer, Edge, Firefox, Chrome, Safari y Opera.
 
-  PHP
+*** PHP
 
 PHP es un lenguaje de alto nivel desarrollado a partir del año 
 1998 por una comunidad de desarrolladores distribuidos por todo 
@@ -256,7 +264,7 @@ lo puso como uno de los requerimientos al desarrollar la
 aplicación, debido a la necesidad de integrarla a otras y de 
 mantenerla.
 
-  Laravel
+*** Laravel
 
 Laravel es un framework web desarrollado por Taylor Otwell a 
 partir de 2012. Permite el usar de PHP evitando reescribir código 
@@ -270,14 +278,14 @@ de componentes hechos para otros frameworks como el mencionado
 Symfony; por lo que cuenta con buen soporte y no permite 
 problemas de seguridad comunes. 
 
-  LDAP
+*** LDAP
 
 LDAP es un protocolo diseñado para autenticar usuarios y 
 almacenar información relacionada con estos. Es requerido usarlo 
 porque la infraestructura de autenticación en la Universidad de 
 Pinar del Río está basada en él.
 
-  PHPUnit
+*** PHPUnit
 
 PHPUnit es un framework para hacer más fácil las pruebas 
 unitarias al software escrito en PHP. Esto es esencial para la 
@@ -285,7 +293,7 @@ creación de una aplicación sin errores. De esa manera se evita
 comprometer la integridad de la información y se garantiza el 
 acceso a esta solo por las personas autorizadas.
 
-  Nginx
+*** Nginx
 
 Nginx es un servidor HTTP que ha venido ganando aceptación en la 
 comunidad de desarrolladores web por su eficiencia y su 
@@ -295,7 +303,7 @@ requerimiento porque el despliegue de esta aplicación se
 realizará en un máquina donde está siendo usado para ejecutar 
 otras aplicaciones.
 
-  Metodologías
+*** Metodologías
 
 El desarrollo del software es un proceso altamente complejo, que 
 no puede ser dirigido de manera improvisada porque la experiencia 
@@ -304,34 +312,34 @@ llevar a cabo el proyecto. Por eso surgen las metodologías de
 desarrollo. A continuación se exponen la metodología a usar en 
 este proyecto y herramientas complementarias a esta.
 
-  Metodología Ágil XP
+**** Metodología Ágil XP
 
 El trabajo a realizar tiene las siguientes limitaciones:
 
-• El software debe desarrollarse en 4 meses como máximo. 
+- El software debe desarrollarse en 4 meses como máximo. 
 
-• Los requerimientos son determinados mediante el intercambio 
+- Los requerimientos son determinados mediante el intercambio 
   contínuo con la Dirección de Informatización de la Universidad 
   de Pinar del Río. 
 
-• El equipo de desarrollo es de una sola persona.
+- El equipo de desarrollo es de una sola persona.
 
 A continuación se describe la Metodología Ágil XP contrastándola 
 con las metodologías tradicionales para justificar su elección 
 para este proyecto:
 
-• Está destinada a ser usada por equipos pequeños.
+- Está destinada a ser usada por equipos pequeños.
 
-• Los requerimientos son imprecisos o cambiantes.
+- Los requerimientos son imprecisos o cambiantes.
 
-• Las relaciones desarrollador-desarrollador y 
+- Las relaciones desarrollador-desarrollador y 
   desarrollador-cliente son esenciales.
 
-• El cliente es parte del equipo de desarrollo.
+- El cliente es parte del equipo de desarrollo.
 
-• No genera muchos artefactos.
+- No genera muchos artefactos.
 
-• Documenta solo aspectos esenciales.
+- Documenta solo aspectos esenciales.
 
 Como las metodologías tradicionales cumplen con lo contrario de 
 los aspectos mencionados anteriormente, y XP hace posible el 
@@ -341,12 +349,14 @@ característica adicional para las cuales han sido diseñadas otras
 metodologías ágiles, por lo que XP está ajustada a las 
 necesidades del proyecto.
 
-  UML
+**** UML
 
-Es un lenguaje gráfico usado para especificar, documentar y 
-construir un software. UML es un estándar para describir el 
-software, que incluye aspectos conceptuales como procesos, 
-funciones del sistema; además de aspectos concretos como código 
-en un lenguaje de programación y esquemas de bases de 
-datos[Wikipedia]. 
+Es un lenguaje gráfico usado para especificar, documentar y construir
+un software. UML es un estándar para describir el software, que
+incluye aspectos conceptuales como procesos, funciones del sistema;
+además de aspectos concretos como código en un lenguaje de
+programación y esquemas de bases de datos[Wikipedia].
+
+* TODO Capítulo 2
+* TODO Capítulo 3
 
