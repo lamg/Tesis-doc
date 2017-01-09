@@ -1,0 +1,352 @@
+#+TITLE: Portal de servicios de redes de la Universidad de Pinar del Río
+
+#+AUTHOR: Luis Ángel Méndez Gort
+
+* Capítulo I: Introducción
+
+** Introducción
+
+Las tecnologías informáticas y de comunicaciones cada vez penetran más
+en la sociedad, debido a las ventajas que proporciona su uso. Las
+universidades no son la excepción, pues en ellas estas herramientas
+facilitan la distribución y entrega de tareas, la distribución de
+bibliografía a los estudiantes, y la comunicación entre ellos y el
+claustro de profesores. Todo esto se hace mediante redes informáticas.
+
+Una red informática consiste en un grupo de computadoras conectadas a
+través de un medio, que puede ser un cableado u ondas de radio
+generalmente. Este sirve para que cada equipo pueda enviar y recibir
+mensajes, por lo cual debe haber un convenio sobre el contenido de
+estos. A esto último se le conoce como protocolo.
+
+Actualmente se usan varios protocolos definidos a partir de la década
+de 1970 por Vinton Cerf y Robert E. Khan. Ellos son complementarios,
+es decir, se usan varios de ellos para realizar la comunicación y esto
+permite, junto con su diseño, una flexibilidad adecuada para la
+mayoría de los entornos. Por eso constituyen la base de Internet y de
+las redes privadas de instituciones como la nuestra.
+
+En el año 1996 se creo la primera red informática de nuestra
+universidad, para gestionar los servicios de las bibliotecas.  Desde
+entonces ha ido aumentando el alcance de la red universitaria
+progresivamente. Actualmente cuenta con una serie de servicios como el
+correo electrónico, el Internet, el chat mediante el protocolo XMPP,
+el acceso a la red inalámbrica UPR-WIFI y el acceso mediante la
+Plataforma de Acceso Público (PAP). Para acceder a cada uno existen
+servicios en la red dedicados a autenticar a cada usuario de estos,
+además de gestionar el consumo de algunos de ellos como el correo
+electrónico y el Internet, que tienen cuotas de almacenamiento y
+descarga asignados respectivamente.
+
+** Situación problémica
+
+La gestión de estos servicios se realiza actualmente de forma
+dispersa, además de que hay información relacionada con ellos de de
+nulo o difícil acceso, por parte de los usuarios y de los
+administradores de red, que sería muy útil a la hora de cumplir con
+las regulaciones de seguridad informática y para la gestión de los
+servicios por los propios usuarios. Un ejemplo de esto son las
+siguientes limitaciones actuales:
+
+- No se tiene manera fácil de monitorizar las direcciones IP 
+  (conociendo el área de la universidad a la que pertenecen) y de 
+  hardware usadas para acceder a las cuentas de los usuarios.
+
+- El estado del consumo de las cuotas está disperso en los diferentes
+  servicios con cuota y el usuario debe autenticarse cada vez que
+  desea conocerlo.
+
+- El proceso de entrega de los contratos para el uso de los 
+  servicios es burocrático.
+
+- Los usuarios no conocen la existencia y el uso de servicios 
+  implementados.
+
+- Los usuarios no tienen información sobre el historial de acceso 
+  a sus cuentas.
+
+- Las notificaciones enviadas por los administradores son 
+  mensajes comunes de correo electrónico, esto hace posible la
+  personificación de los administradores por parte de piratas
+  informáticos para robar credenciales, y además genera información
+  duplicada en los buzones.
+
+El objeto de estudio es la gestión de la información de los servicios
+de red brindados por la Universidad de Pinar del Río. Para esto se
+define el objetivo general de la investigación como desarrollar una
+aplicación informática para gestionar la información de los servicios
+de red brindados por la Universidad de Pinar del Río.
+
+Del objetivo general se derivan los siguientes objetivos 
+específicos:
+
+- Documentar los servicios de red en la Universidad de Pinar del 
+  Río.
+
+- Implementar un sistema informático que opere con los servicios 
+  disponibles en la red de la Universidad de Pinar del Río, y 
+  permita la interacción con ellos de manera eficiente.
+
+Los objetivos anteriores serán cumplidos al realizar las tareas 
+específicas siguientes:
+
+- Diálogo con los trabajadores del nodo para conocer las 
+  particularidades de los servicios de red de la Universidad de 
+  Pinar del Río.
+
+- Estudio de herramientas similares a la que se pretende 
+  construir.
+
+- Estudio y selección de herramientas para la realización de este 
+  proyecto.
+
+- Diseño de una aplicación cliente-servidor para gestionar la 
+  información de los servicios de red de la Universidad de Pinar del
+  Río.
+
+- Implementación de la aplicación diseñada usando las 
+  herramientas seleccionadas.
+
+- Creación de documentación para facilitar al usuario el uso del 
+  software.
+
+Esta investigación se basa en la siguiente idea a defender: El uso del
+software descrito facilitará el acceso, control y la gestión de la
+información proporcionada por los servicios de red de la Universidad
+de Pinar del Río, contribuyendo a una mejor experiencia de usuario y a
+una mayor seguridad de la red.
+
+Para realizar esta investigación se usarán los siguientes métodos 
+científicos:
+
+*** TODO (personalizar ...) Métodos teóricos
+
+- Inductivo-deductivo: en los procesos de recopilación de los 
+  requerimientos, análisis, diseño e implementación del software.
+
+- Histórico: en la revisión de la información referente al tema, 
+  para conocer el estado actual de los servicios TODO.
+
+- Análisis-síntesis: en los procesos de recopilación de los 
+  requerimientos, análisis, diseño e implementación del software.
+
+*** TODO (personalizar ...) Métodos empíricos
+
+- Entrevista: en la recopilación de requerimientos del software a 
+  desarrollar TODO (personalizar métodos).
+
+- Revisión bibliográfica: en el estudio de los documentos 
+  relacionados con el tema.
+
+** TODO (explicar ...) Estructura del trabajo
+
+El siguiente trabajo se va a estructurar en tres capítulos, donde 
+se abordarán los siguientes elementos:
+
+  Capítulo 1: Contextualización de la Dirección de 
+  Informatización de la Universidad de Pinar del Río
+
+En este capítulo se realizará una descripción concisa del 
+funcionamiento de la Dirección de Informatización de la 
+Universidad de Pinar del Río, enfocada en el aspecto de la 
+gestión de la información generada por los servicios 
+implementados.
+
+También se hace un estudio de las tendencias, metodologías y 
+tecnologías actuales relacionadas con la implementación de este 
+software. Además se elige, entre un conjunto amplio de 
+herramientas útiles para realizar este trabajo, la más adecuada; 
+justificando cada decisión.
+
+  Capítulo 2: Modelo del dominio y sistema
+
+En este capítulo se trata el modelo de dominio y sistema, 
+describiéndose los artefactos de la metodología seleccionada. En 
+el modelo del dominio se definen los conceptos principales y una 
+representación suya. En el sistema se describen los actores, los 
+requerimientos funcionales y los requerimientos no funcionales, 
+el diagrama de casos de uso del sistema y la descripción textual 
+de los principales casos de uso. Finalmente se hace un análisis 
+de factibilidad incluyendo la estimación del costo de desarrollar 
+el software.
+
+  Capítulo 3: Descripción de la solución propuesta
+
+En este capítulo se realizarán diagramas como el diagrama de 
+secuencia, que proporciona un análisis detallado de cada caso de 
+uso, el de clases, el de implementación y el de despliegue.
+
+Capítulo 0
+
+  Descripción de la entidad (Dirección de Informatización de la 
+  Universidad de Pinar del Río)
+
+La Dirección de Informatización de la Universidad de Pinar del 
+Río se encarga de la administración e implementación de los 
+servicios de red de toda la universidad. En ella existe un grupo 
+dedicado al mantenimiento y puesta en marcha del hardware de la 
+red, es decir la parte tangible. Estos trabajadores realizan su 
+labor colaborando en ocasiones con los de ETECSA, los encargados 
+de la climatización y los electricistas.
+
+Por otra parte está el grupo de administradores y 
+desarrolladores. Estos se encargan de configurar, desarrollar y 
+administrar el software que permite que la red sea útil para 
+comunicarnos de manera segura. TODO explicar los procesos en el 
+departamento y el proceso que yo voy a hacer
+
+  Herramientas
+
+Las aplicaciones web permiten ser usadas con solo instalar un 
+navegador web en nuestro dispositivo, esto permite que cualquier 
+usuario con una conexión a la red pueda valerse de ellas sin 
+configurar ni instalar ningún software adicional. El código del 
+software es descargado de la red y ejecutado en el ambiente 
+seguro de nuestro navegador. Para que esto sea posible se usan 
+las siguientes tecnologías.
+
+  HTML
+
+HTML un tipo de documento que permite la inclusión de vínculos 
+interactivos a otros documentos en su contenido. Es la 
+representación de la mayor parte del contenido textual en la Web. 
+Es seleccionado debido a su amplia difusión y al requerimiento de 
+integración de este trabajo con aplicaciones e infraestructura ya 
+existentes.
+
+  CSS
+
+CSS u Hojas de Estilo en Cascada según sus siglas en Inglés, 
+permite la separación de la apariencia y el contenido en una 
+página web. Lo anterior hace posible simplificar el documento 
+HTML sin perder el poder de tener una apariencia adecuada.
+
+  Bootstrap
+
+Bootstrap es un framework desarrollado por Twitter para hacer más 
+fácil el trabajo con CSS. Contiene tipografías, estilos y 
+plantillas que proporcionan una interfaz atractiva y moderna.
+
+  JavaScript
+
+JavaScript es un lenguaje creado por Brendan Eich para ser 
+ejecutado en los navegadores web, de esa manera los clientes de 
+una web no tienen que enviar información al servidor para ser 
+procesada si esta puede serlo en la máquina del cliente. Este 
+lenguaje ha sido aceptado como estándar de facto, para la tarea 
+descrita, por todos los navegadores web importantes como Internet 
+Explorer, Edge, Firefox, Chrome, Safari y Opera.
+
+  PHP
+
+PHP es un lenguaje de alto nivel desarrollado a partir del año 
+1998 por una comunidad de desarrolladores distribuidos por todo 
+el mundo. Este fue creado con el objetivo de facilitar la 
+programación de aplicaciones web en HTML. Una de sus ventajas es 
+que tiene una sintaxis arraigada en la comunidad de programadores 
+a nivel mundial, lo que hace probable que a cualquier programador 
+le resulte fácil adaptarse rápidamente a esta. Su integración con 
+potentes motores de bases de datos como MySQL es excelente. La 
+comunidad de desarrolladores a su alrededor es muy activa, lo que 
+permite contar con las mejores herramientas y la rápida adopción 
+de innovaciones muy útiles, como el desarrollo usando frameworks 
+web. Además de las razones anteriores para seleccionarlo, la 
+Dirección de informatización de la Universidad de Pinar del Río 
+lo puso como uno de los requerimientos al desarrollar la 
+aplicación, debido a la necesidad de integrarla a otras y de 
+mantenerla.
+
+  Laravel
+
+Laravel es un framework web desarrollado por Taylor Otwell a 
+partir de 2012. Permite el usar de PHP evitando reescribir código 
+similar y hace fácil el acceso a las bases de datos. Este ha ido 
+ganando terreno sobre otros frameworks web en PHP consagrados, 
+como Symfony, por su simplicidad y poder, además de su facilidad 
+para ser aprendido por desarrolladores que conocen algún otro 
+framework PHP. También posee una comunidad muy activa y cuenta 
+con la ventaja de que su desarrollo se basa en la reutilización 
+de componentes hechos para otros frameworks como el mencionado 
+Symfony; por lo que cuenta con buen soporte y no permite 
+problemas de seguridad comunes. 
+
+  LDAP
+
+LDAP es un protocolo diseñado para autenticar usuarios y 
+almacenar información relacionada con estos. Es requerido usarlo 
+porque la infraestructura de autenticación en la Universidad de 
+Pinar del Río está basada en él.
+
+  PHPUnit
+
+PHPUnit es un framework para hacer más fácil las pruebas 
+unitarias al software escrito en PHP. Esto es esencial para la 
+creación de una aplicación sin errores. De esa manera se evita 
+comprometer la integridad de la información y se garantiza el 
+acceso a esta solo por las personas autorizadas.
+
+  Nginx
+
+Nginx es un servidor HTTP que ha venido ganando aceptación en la 
+comunidad de desarrolladores web por su eficiencia y su 
+implementación de características para el despliegue de 
+aplicaciones complejas. Además de las ventajas anteriores, es un 
+requerimiento porque el despliegue de esta aplicación se 
+realizará en un máquina donde está siendo usado para ejecutar 
+otras aplicaciones.
+
+  Metodologías
+
+El desarrollo del software es un proceso altamente complejo, que 
+no puede ser dirigido de manera improvisada porque la experiencia 
+demuestra que esto provoca un alto costo o la imposibilidad de 
+llevar a cabo el proyecto. Por eso surgen las metodologías de 
+desarrollo. A continuación se exponen la metodología a usar en 
+este proyecto y herramientas complementarias a esta.
+
+  Metodología Ágil XP
+
+El trabajo a realizar tiene las siguientes limitaciones:
+
+• El software debe desarrollarse en 4 meses como máximo. 
+
+• Los requerimientos son determinados mediante el intercambio 
+  contínuo con la Dirección de Informatización de la Universidad 
+  de Pinar del Río. 
+
+• El equipo de desarrollo es de una sola persona.
+
+A continuación se describe la Metodología Ágil XP contrastándola 
+con las metodologías tradicionales para justificar su elección 
+para este proyecto:
+
+• Está destinada a ser usada por equipos pequeños.
+
+• Los requerimientos son imprecisos o cambiantes.
+
+• Las relaciones desarrollador-desarrollador y 
+  desarrollador-cliente son esenciales.
+
+• El cliente es parte del equipo de desarrollo.
+
+• No genera muchos artefactos.
+
+• Documenta solo aspectos esenciales.
+
+Como las metodologías tradicionales cumplen con lo contrario de 
+los aspectos mencionados anteriormente, y XP hace posible el 
+trabajo dentro de las limitaciones antes mencionadas, entonces es 
+la elección correcta. Además como no se requiere ninguna 
+característica adicional para las cuales han sido diseñadas otras 
+metodologías ágiles, por lo que XP está ajustada a las 
+necesidades del proyecto.
+
+  UML
+
+Es un lenguaje gráfico usado para especificar, documentar y 
+construir un software. UML es un estándar para describir el 
+software, que incluye aspectos conceptuales como procesos, 
+funciones del sistema; además de aspectos concretos como código 
+en un lenguaje de programación y esquemas de bases de 
+datos[Wikipedia]. 
+
