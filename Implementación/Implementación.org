@@ -29,25 +29,12 @@ This program comes from the following necessities of UPR's DC:
 
 - Document the implemented services.
 
+But in general perspective, all these services are instances of an
+interface for receiving messages and content regarding certain fixed
+subjects, which are the services implemented at UPR's network.
+
 * Implementation
 
-In this section every previous necessity will be satisfied by the
-implementation of the corresponding feature.
+_REMARK_ Along this document Haskell is used as specification
+language. _END OF REMARK_
 
-** Feature 0
-
-Register the MAC and IP addresses used to access the users accounts,
-and use that information for reporting the account access to users and
-administrators.
-
-This operation consists in two separate steps: register the MAC and
-the IP when an user logs in, and report to an user or to an
-administrator the information about access they are allowed to see.
-
-Along this document Haskell is used as specification language, the
-following functions express the previous paragraph's statements:
-
-#+BEGIN_SRC haskell
-#+END_SRC
-
-** TODO
