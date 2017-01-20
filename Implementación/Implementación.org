@@ -35,8 +35,8 @@ subjects, which are the services implemented at UPR's network.
 
 * Design
 
-_REMARK_ Along this document Haskell is used as specification
-language. _END OF REMARK_
+_REMARK_ Along this document a language with syntax resembling Haskell
+is used as specification language. _END OF REMARK_
 
 The core of the program consist in an interface for accessing
 and publishing information related to services implemented at
@@ -48,24 +48,66 @@ the notification services. Messaging services permit establishing
 conversations, and the notification services permit receiving
 small messages (notifications).
 
-This interface represents the user's point of view.
+This interface represents the user's point of view,
+also ~b0 = b . Just~.
 
 #+BEGIN_SRC
 interface Portal where
+  isAdmin :: Bool
   logIn :: a (Maybe Credentials) -> b (Maybe [Service])
-  selServ :: b (Just [Service]) -> SId -> c Service
-  logOut :: b (Just _) -> a Nothing
+  selServ :: b0 [Service] -> SId -> c Service
+  publish :: b1 isAdmin -> Service -> b [Service]
+  logOut :: b0 _ -> a Nothing
+  public :: a Nothing
 #+END_SRC
 
 The ~Bool~ value in the ~f~ context is equivalent to "It is a
 bidirectional conversation service, instead an unidirectional one".
-The f context must reference the a service.
+The f context must reference the service.
+
+The ~Bool~ value in the ~g~ context is equivalent to "There are unread
+messages".
 
 #+BEGIN_SRC
 interface Service where
+  isBid :: Bool
+  isAdmin :: Bool
   show :: f [Conversation] Bool
-  delete :: f CId -> d Bool
-  update :: f CId True -> Text -> f Conversation
-  create :: f Conversation True -> e Bool
+  delete :: f (isAdmin \/ isBid) -> CId -> d Bool
+  update :: f (isAdmin \/ isBid) -> CId -> Text -> f Conversation
+  create :: f (isAdmin \/ isBid) -> Conversation -> e Bool
+  news :: g Bool
 #+END_SRC
 
+* Implementation
+
+The success in solving problems seems to depend on
+abstraction an interactivity, i.e. agile symbolic
+manipulation of these abstractions. Therefore this
+chapter on implementation, in Haskell.
+
+#+NAME: logIn
+#+BEGIN_SRC haskell
+class AccountDB where
+  logIn ∷ Monad m ⇒ Credentials → m [Service]
+ 
+#+END_SRC
+
+** Modules
+
+#+BEGIN_SRC haskell :noweb yes :tangle src/App.hs
+module App where
+
+<<logIn>>
+#+END_SRC
+
+* Web application
+
+The Portal and Service interfaces are implemented as a REST API in
+Laravel.
+
+The API consists in the following rules:
+
+- ~/~ -> public
+- ~/login~ -> logIn
+- ~/
