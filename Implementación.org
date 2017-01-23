@@ -1,0 +1,93 @@
+#+TITLE: Network services portal of the University of Pinar del Río
+#+AUTHOR: Luis Ángel Méndez Gort
+#+EMAIL: gort.andres000@gmail.com
+#+LATEX_CLASS: article
+#+OPTIONS: toc:nil
+
+* Introduction
+
+At University of Pinar del Río (UPR), the Directorate of
+Computerization (DC) is the department in charge of all aspects of the
+computer networks. They maintain and expand the hardware and software
+infrastructure. Currently all services are used by registered users.
+
+This program comes from the following necessities of UPR's DC:
+
+- Register the MAC and IP addresses used to access the users accounts,
+  and use that information for reporting the account access to users
+  and administrators.
+
+- Place consumption of the different quotas, like the email storage
+  quota and the internet download quota, in a single site.
+
+- Automate the delivery of contracts for using the network services,
+  using the network itself.
+
+- Notify the users, thus avoiding the impersonation of administrators
+  which is common with the current email notifications, and also the
+  duplication of messages in mailboxes.
+
+- Document the implemented services.
+
+But in general perspective, all these services are instances of an
+interface for receiving messages and content regarding certain
+subjects, which are the services implemented at UPR's network.
+
+* Design
+
+_REMARK_ Along this document a language with syntax resembling Haskell
+is used as specification language. _END OF REMARK_
+
+The core of the program consist in an interface for accessing
+and publishing information related to services implemented at
+UPR's network. Since all services need authentication, the 
+program provides authentication for all managed services.
+
+There are two types of services, the messaging services and
+the notification services. Messaging services permit establishing
+conversations, and the notification services permit receiving
+small messages (notifications).
+
+The success in solving problems seems to depend on abstraction an
+interactivity, i.e. agile symbolic manipulation of these
+abstractions. Therefore this chapter on implementation, in Haskell.
+
+#+NAME: portalClass
+#+BEGIN_SRC haskell
+class Portal where -- Privileges as Monad?
+  logIn ∷ Credentials → IO (Maybe Session)
+  shwServ ∷ Session [Service]
+  selServ ∷ Session SId → Session Bool
+  publish ∷ Session Service → Session Bool
+  logOut ∷ Session → IO ()
+  initial ∷ IO ()
+#+END_SRC
+
+#+NAME: serviceClass
+#+BEGIN_SRC haskell
+class Service where
+  showS ∷ Session [Conversation]
+  delete ∷ Session CId → Session Bool
+  update ∷ Session CId → Text → Session Conversation
+  create ∷ Session Conversation → Session Bool
+  news ∷ Session Bool
+#+END_SRC
+
+The API consists in the following rules:
+
+- ~/~ GET -> initial
+- ~/login~ GET -> logIn
+- ~/services~ GET -> shwServ
+- ~/services~ PUT -> publish
+- ~/services/{id}~ GET -> selServ >>= showS -- Bool Monad?
+- ~/logout~ GET -> logOut
+
+- ~/services/{id}~ DELETE -> delete
+- ~/services/{id}~ PATCH -> update
+- ~/services/{id}~ PUT -> create
+- ~/services/{id}/news~ GET -> news
+
+* Web application
+The web application is implemented in Spock.
+
+
