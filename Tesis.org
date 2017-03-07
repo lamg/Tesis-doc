@@ -245,38 +245,27 @@ lenguaje ha sido aceptado como estándar de facto, para la tarea
 descrita, por todos los navegadores web importantes como Internet 
 Explorer, Edge, Firefox, Chrome, Safari y Opera.
 
-*** PHP
+*** Go
+Go es un lenguaje de programación y un conjunto de herramientas de
+desarrollo publicados en 2009 por Google. Sus diseñadores tuvieron
+como principio la simplicidad y la adecuación a las necesidades
+actuales de los programadores. Es por eso que el lenguaje carece de
+características comunes en otros lenguajes populares, y sin embargo es
+útil para resolver los problemas por los que estos últimos han
+alcanzado su status. Las principales herramientas complementarias son
+las siguientes
 
-PHP es un lenguaje de alto nivel desarrollado a partir del año 
-1998 por una comunidad de desarrolladores distribuidos por todo 
-el mundo. Este fue creado con el objetivo de facilitar la 
-programación de aplicaciones web en HTML. Una de sus ventajas es 
-que tiene una sintaxis arraigada en la comunidad de programadores 
-a nivel mundial, lo que hace probable que a cualquier programador 
-le resulte fácil adaptarse rápidamente a esta. Su integración con 
-potentes motores de bases de datos como MySQL es excelente. La 
-comunidad de desarrolladores a su alrededor es muy activa, lo que 
-permite contar con las mejores herramientas y la rápida adopción 
-de innovaciones muy útiles, como el desarrollo usando frameworks 
-web. Además de las razones anteriores para seleccionarlo, la 
-Dirección de informatización de la Universidad de Pinar del Río 
-lo puso como uno de los requerimientos al desarrollar la 
-aplicación, debido a la necesidad de integrarla a otras y de 
-mantenerla.
-
-*** Laravel
-
-Laravel es un framework web desarrollado por Taylor Otwell a 
-partir de 2012. Permite el usar de PHP evitando reescribir código 
-similar y hace fácil el acceso a las bases de datos. Este ha ido 
-ganando terreno sobre otros frameworks web en PHP consagrados, 
-como Symfony, por su simplicidad y poder, además de su facilidad 
-para ser aprendido por desarrolladores que conocen algún otro 
-framework PHP. También posee una comunidad muy activa y cuenta 
-con la ventaja de que su desarrollo se basa en la reutilización 
-de componentes hechos para otros frameworks como el mencionado 
-Symfony; por lo que cuenta con buen soporte y no permite 
-problemas de seguridad comunes. 
+- El compilador: se caracteriza por producir código de máquina
+  eficiente y por operar mucho más rápido que otros compiladores
+  similares.
+- El programa ~go get~: gestiona los paquetes y sus dependencias de
+  una manera muy simple.
+- El programa ~gofmt~: formatea el código fuente siguiendo un 
+  estándar.
+- El programa ~go test~: ejecuta pruebas al código para comprobar
+  si está de acuerdo con su especificación.
+- El programa ~godoc~: genera documentación a partir del código
+  fuente.
 
 *** LDAP
 
@@ -284,14 +273,6 @@ LDAP es un protocolo diseñado para autenticar usuarios y
 almacenar información relacionada con estos. Es requerido usarlo 
 porque la infraestructura de autenticación en la Universidad de 
 Pinar del Río está basada en él.
-
-*** PHPUnit
-
-PHPUnit es un framework para hacer más fácil las pruebas 
-unitarias al software escrito en PHP. Esto es esencial para la 
-creación de una aplicación sin errores. De esa manera se evita 
-comprometer la integridad de la información y se garantiza el 
-acceso a esta solo por las personas autorizadas.
 
 *** Nginx
 

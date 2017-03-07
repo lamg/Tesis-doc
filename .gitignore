@@ -2,4 +2,6 @@
 *.tex
 *.tex~
 *.pdf
-Implementación/dist
+dist
+.#*
+\#*
