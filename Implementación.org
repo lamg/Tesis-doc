@@ -1,4 +1,4 @@
-#+TITLE: Gestión de de la información de usuarios registrados en la UPR
+#+TITLE: Sincronización de usuarios registrados
 #+AUTHOR: Luis Ángel Méndez Gort
 #+EMAIL: gort.andres000@gmail.com
 #+LATEX_CLASS: article
@@ -6,39 +6,48 @@
 
 * Introducción
 
-En la UPR el Directorio de Informatización se ocupa de 
-mantener todas las redes de computadoras. Ellos mantienen y
-expanden la infraestructura de hardware y software. Actualmente
-todos los servicios son usados por usuarios registrados
+En la UPR el Directorio de Informatización se ocupa de mantener todas
+las redes de computadoras. Ellos mantienen y expanden la
+infraestructura de hardware y software. Actualmente todos los
+servicios son usados por usuarios registrados
 
-Este programa surge de la necesidad de sincronizar los usuarios
-de las bases de datos SIGENU y ASET, con el directorio activo
-(el servidor LDAP accesible a través de la dirección ad.upr.edu.cu,
-que se usa directamente para autenticar los usuarios).
+Este programa surge de la necesidad de sincronizar los usuarios de las
+bases de datos SIGENU y ASET, con el directorio activo (el servidor
+LDAP accesible a través de la dirección ad.upr.edu.cu, que se usa
+directamente para autenticar los usuarios).
 
-Este servicio será usado por quienes estén en determinado grupo
-del AD creado con el propósito de agrupar esos usuarios.
+Este servicio será usado por quienes estén en determinado grupo del AD
+creado con el propósito de agrupar esos usuarios.
 
-El proceso de sicronización consiste en agregar en el ad
-los campos de usuario que esten en las bases de datos y
-que aún no existan en él.
+El proceso de sicronización consiste en agregar en el Directorio
+Activo los campos de usuario que esten en las bases de datos y que aún
+no existan en él.
 
-* Design
+* Diseño
+
+~C~: credenciales
+~O~: ordenación
+~S~: sicronización
+~U~: registro de usuario
+~A~: resultado de adición
+~M~: modificación
+
+‌Lista de multiprogramas
+
 #+BEGIN_SRC
-proc serveUser |[
-  auth
-  ;dash
-]|
-
-proc serve |[
-  *[serve]
-]|
+{ C } auth { O }
+{ M } userMod { O }
+{ O } sync { S }
+{ U } add { A }
+{ O } close { true }
 #+END_SRC
 
-#+BEGIN_SRC
-proc auth |[
-  
-]|
+~S ⇒ O~
+~O ⇒ M~
+~A ⇒ O~
 
+~C ≡ User ∧ Pass ∧ WebContext~
+~O ≡ ~
+#+BEGIN_SRC
 a ≢ b ∧ (a ∨ b) ≡ a ∨ b
 #+END_SRC
