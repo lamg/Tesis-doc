@@ -1,7 +1,11 @@
-#+TITLE: Portal de servicios de redes de la Universidad de Pinar del Río
+#+CAPTION: Caption
+#+NAME:   fig:SED-HR4049
+[[./UPR.jpg]]
+#+TITLE: Gestión de la información de cuentas de usuarios en la Universidad de Pinar del Río
 #+AUTHOR: Luis Ángel Méndez Gort
-#+LATEX_CLASS: book
+#+LATEX_CLASS: article
 #+ATTR_LATEX: :font cm
+
 
 * Capítulo 0: Introducción
 
@@ -20,13 +24,6 @@ generalmente. Este sirve para que cada equipo pueda enviar y recibir
 mensajes, por lo cual debe haber un convenio sobre el contenido de
 estos. A esto último se le conoce como protocolo.
 
-Actualmente se usan varios protocolos definidos a partir de la década
-de 1970 por Vinton Cerf y Robert E. Khan. Ellos son complementarios,
-es decir, se usan varios de ellos para realizar la comunicación y esto
-permite, junto con su diseño, una flexibilidad adecuada para la
-mayoría de los entornos. Por eso constituyen la base de Internet y de
-las redes privadas de instituciones como la nuestra.
-
 En el año 1996 se creo la primera red informática de nuestra
 universidad, para gestionar los servicios de las bibliotecas.  Desde
 entonces ha ido aumentando el alcance de la red universitaria
@@ -41,59 +38,36 @@ descarga asignados respectivamente.
 
 ** Situación problémica
 
-La gestión de estos servicios se realiza actualmente de forma
-dispersa, además de que hay información relacionada con ellos de de
-nulo o difícil acceso, por parte de los usuarios y de los
-administradores de red, que sería muy útil a la hora de cumplir con
-las regulaciones de seguridad informática y para la gestión de los
-servicios por los propios usuarios. Un ejemplo de esto son las
-siguientes limitaciones actuales:
+El acceso a los servicios requiere la autenticación de las
+credenciales de los usuarios. Esto se hace usando un servidor,
+conocido como Directorio Activo, accesible usando el protocolo LDAP;
+que es una base de datos con las credenciales autorizadas y otra
+información de los usuarios. Sin embargo esta tiene como fuente de sus
+datos a otras dos bases de datos (SIGENU y ASET), y actualmente es
+llenada manualmente, lo cual dada la cantidad de datos hace el proceso
+muy engorroso.
 
-- No se tiene manera fácil de monitorizar las direcciones IP 
-  (conociendo el área de la universidad a la que pertenecen) y de 
-  hardware usadas para acceder a las cuentas de los usuarios.
-
-- El estado del consumo de las cuotas está disperso en los diferentes
-  servicios con cuota y el usuario debe autenticarse cada vez que
-  desea conocerlo.
-
-- El proceso de entrega de los contratos para el uso de los 
-  servicios es burocrático.
-
-- Los usuarios no conocen la existencia y el uso de servicios 
-  implementados.
-
-- Los usuarios no tienen información sobre el historial de acceso 
-  a sus cuentas.
-
-- Las notificaciones enviadas por los administradores son 
-  mensajes comunes de correo electrónico, esto hace posible la
-  personificación de los administradores por parte de piratas
-  informáticos para robar credenciales, y además genera información
-  duplicada en los buzones.
-
-El objeto de estudio es la gestión de la información de los servicios
-de red brindados por la Universidad de Pinar del Río. Para esto se
-define el objetivo general de la investigación como desarrollar una
-aplicación informática para gestionar la información de los servicios
-de red brindados por la Universidad de Pinar del Río.
+El objeto de estudio es la gestión de la información de las cuentas de
+usuarios de la Universidad de Pinar del Río. Para esto se define el
+objetivo general de la investigación como desarrollar una aplicación
+informática para gestionar la información de las cuentas de usuarios
+de la Universidad de Pinar del Río.
 
 Del objetivo general se derivan los siguientes objetivos 
 específicos:
 
-- Documentar los servicios de red en la Universidad de Pinar del 
-  Río.
+- Documentar el proceso de administración de las cuentas
+  de usuario
 
-- Implementar un sistema informático que opere con los servicios 
-  disponibles en la red de la Universidad de Pinar del Río, y 
-  permita la interacción con ellos de manera eficiente.
+- Implementar un sistema informático que permita automatizar
+  ese proceso
 
 Los objetivos anteriores serán cumplidos al realizar las tareas 
 específicas siguientes:
 
-- Diálogo con los trabajadores del nodo para conocer las 
-  particularidades de los servicios de red de la Universidad de 
-  Pinar del Río.
+- Diálogo con los trabajadores del nodo para conocer las
+  particularidades del proceso de administración de cuentas de usuario
+  de la Universidad de Pinar del Río.
 
 - Estudio de herramientas similares a la que se pretende 
   construir.
@@ -101,9 +75,9 @@ específicas siguientes:
 - Estudio y selección de herramientas para la realización de este 
   proyecto.
 
-- Diseño de una aplicación cliente-servidor para gestionar la 
-  información de los servicios de red de la Universidad de Pinar del
-  Río.
+- Diseño de una aplicación cliente-servidor para automatizar el
+  proceso de administración de las cuentas de usuario de la
+  Universidad de Pinar del Río.
 
 - Implementación de la aplicación diseñada usando las 
   herramientas seleccionadas.
@@ -112,10 +86,8 @@ específicas siguientes:
   software.
 
 Esta investigación se basa en la siguiente idea a defender: El uso del
-software descrito facilitará el acceso, control y la gestión de la
-información proporcionada por los servicios de red de la Universidad
-de Pinar del Río, contribuyendo a una mejor experiencia de usuario y a
-una mayor seguridad de la red.
+software descrito permitirá la gestión de la información de las
+cuentas de usuario de manera eficiente.
 
 ** Métodos científicos
 
@@ -127,9 +99,9 @@ científicos:
 - Inductivo-deductivo: en los procesos de recopilación de los 
   requerimientos, análisis, diseño e implementación del software.
 
-- Histórico: en la revisión de la información referente al diseño
-  e implementación de servicios de red similares, para conocer el
-  estado del arte actual.
+- Histórico: en la revisión de la información referente al diseño e
+  implementación de servicios de administración similares, para
+  conocer el estado del arte actual.
 
 - Análisis-síntesis: en los procesos de recopilación de los 
   requerimientos, análisis, diseño e implementación del software.
@@ -145,7 +117,7 @@ científicos:
 
 ** Estructura del trabajo
 
-El trabajo está estructurado en 5 capítulos:
+El trabajo está estructurado en 4 capítulos:
 
 *** Capítulo 0: Introducción.
 
@@ -158,8 +130,7 @@ trabajo.
 
 En este capítulo se realiza una descripción concisa del funcionamiento
 de la Dirección de Informatización de la Universidad de Pinar del Río,
-enfocada en el aspecto de la gestión de la información generada por
-los servicios implementados.
+enfocada en el aspecto de la administración de las cuentas de usuario.
 
 También se hace un estudio de las tendencias, metodologías y
 tecnologías actuales relacionadas con la implementación de este
@@ -185,23 +156,21 @@ En este capítulo se realizarán diagramas como el diagrama de
 secuencia, que proporciona un análisis detallado de cada caso de uso,
 el de clases, el de implementación y el de despliegue.
 
-* TODO Capítulo 1: Contextualización de la Dirección de Informatización de la Universidad de Pinar del Río
+* Capítulo 1: Contextualización de la Dirección de Informatización de la Universidad de Pinar del Río
 
 La Dirección de Informatización de la Universidad de Pinar del 
 Río se encarga de la administración e implementación de los 
 servicios de red de toda la universidad. En ella existe un grupo 
 dedicado al mantenimiento y puesta en marcha del hardware de la 
-red, es decir la parte tangible. Estos trabajadores realizan su 
+red (Departamento de Infraestructura). Estos trabajadores realizan su 
 labor colaborando en ocasiones con los de ETECSA, los encargados 
 de la climatización y los electricistas.
 
-Por otra parte está el grupo de administradores y
-desarrolladores. Estos se encargan de configurar, desarrollar y
-administrar el software que permite que la red sea útil para
-comunicarnos de manera segura.
-
-TODO explicar los procesos en el
-departamento y el proceso que yo voy a hacer
+Por otra parte está el grupo de administradores y desarrolladores
+(Departamento de Desarrollo). Estos se encargan de configurar,
+desarrollar y administrar el software que permite que la red sea útil
+para comunicarnos de manera segura. El actual trabajo se desarrolla
+dentro este.
 
 **  Herramientas a usar
 
@@ -229,12 +198,6 @@ permite la separación de la apariencia y el contenido en una
 página web. Lo anterior hace posible simplificar el documento 
 HTML sin perder el poder de tener una apariencia adecuada.
 
-*** Bootstrap
-
-Bootstrap es un framework desarrollado por Twitter para hacer más 
-fácil el trabajo con CSS. Contiene tipografías, estilos y 
-plantillas que proporcionan una interfaz atractiva y moderna.
-
 *** JavaScript
 
 JavaScript es un lenguaje creado por Brendan Eich para ser 
@@ -258,11 +221,11 @@ las siguientes
 - El compilador: se caracteriza por producir código de máquina
   eficiente y por operar mucho más rápido que otros compiladores
   similares.
-- El programa ~go get~: gestiona los paquetes y sus dependencias de
+- El comando ~go get~: gestiona los paquetes y sus dependencias de
   una manera muy simple.
 - El programa ~gofmt~: formatea el código fuente siguiendo un 
   estándar.
-- El programa ~go test~: ejecuta pruebas al código para comprobar
+- El comando ~go test~: ejecuta pruebas al código para comprobar
   si está de acuerdo con su especificación.
 - El programa ~godoc~: genera documentación a partir del código
   fuente.
@@ -283,6 +246,20 @@ aplicaciones complejas. Además de las ventajas anteriores, es un
 requerimiento porque el despliegue de esta aplicación se 
 realizará en un máquina donde está siendo usado para ejecutar 
 otras aplicaciones.
+
+*** Microsoft SQL Server
+Microsoft SQL Server es un sistema administrador de bases de datos
+relacionales desarrollado por Microsoft. Es uno de los programas
+líderes en su área por su estabilidad, funcionalidad para diversos
+entornos empresariales, documentación y soporte.
+
+*** PostgreSQL
+PostgreSQL es un sistema administrador de bases de datos relacionales
+desarrollado por una comunidad dispersa en todo el mundo. Constituye
+una alternativa de código abierto y gratis a Microsoft SQL Server.
+Si bien no posee el soporte de una gran compañía como Microsoft,
+en muchas ocasiones puede sustituir sin problemas a Microsoft
+SQL Server; por lo cual cuenta con una gran aceptación.
 
 *** Metodologías
 
@@ -336,8 +313,58 @@ Es un lenguaje gráfico usado para especificar, documentar y construir
 un software. UML es un estándar para describir el software, que
 incluye aspectos conceptuales como procesos, funciones del sistema;
 además de aspectos concretos como código en un lenguaje de
-programación y esquemas de bases de datos[Wikipedia].
+programación y esquemas de bases de datos [Wikipedia].
 
-* TODO Capítulo 2
+* TODO Capítulo 2 Modelo del Dominio y Sistema
+** Introducción
+En este capítulo se define el modelo de dominio y sistema acorde con
+la metodología ágil XP. En el modelo de dominio se definen las
+entidades y conceptos principales, las reglas del negocio y su
+representación. En el sistema se definen los usuarios y
+administradores del sistema, los requisitos funcionales y no
+funcionales.
+
+** Dominio
+
+*** Entidades y conceptos principales
+Departamento: Es la entidad donde se realizan los procesos descritos
+en este trabajo.
+Usuario: Es la persona que interactúa con el programa implementado
+como parte de este trabajo.
+Administrador: Es la persona que se encarga de mantener el programa
+funcionando y registrar sus usarios.
+Sincronización: Es el proceso en el cual los datos no presentes en
+ASSET y SIGENU pasan al directorio activo.
+Directorio Activo: Servidor dedicado a autenticar a los usuarios
+en la red de la Universidad de Pinar del Río.
+Origen de datos: Bases de datos a las cuales los datos de los
+usuarios de la Universidad de Pinar del Río son originalmente
+introducidos.
+Destino de datos: Base de datos usada para autenticar usuarios
+(Directorio Activo).
+Software: Solución desarrollada para el problema expuesto en
+este trabajo.
+
+*** Reglas del negocio a considerar
+
+Las reglas del negocio son afirmaciones que debe cumplir 
+el negocio siempre, por lo tanto deben considerarse en
+el diseño del sistema. Particularmente en este se tienen
+las siguientes.
+- Los usuarios del sistema deben ser trabajadores del
+	departamento.
+- El usuario es el encargado de usar el software para
+	mantener el destino de datos actualizado con respecto
+	al origen de datos.
+- Los administradores dan acceso al sistema a los usuarios.
+
+*** Representación del modelo de dominio
+
+** Sistema
+*** Descripción de usuarios y trabajadores del sistema
+*** Requisitos funcionales
+*** Requisitos no funcionales
+*** Diagrama de funcionalidades
+		
 * TODO Capítulo 3
 

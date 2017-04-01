@@ -48,6 +48,13 @@ no existan en él.
 
 ~C ≡ User ∧ Pass ∧ WebContext~
 ~O ≡ ~
+
 #+BEGIN_SRC
-a ≢ b ∧ (a ∨ b) ≡ a ∨ b
+a ≢ b ⇒ a ∨ b
+≡ {impl, neg}
+a ≡ b ∨ a ∨ b
+≡ {∨ over ≡}
+a ∨ a ∨ b ≡ b ∨ a ∨ b
+≡ {idempotency,unit}
+true
 #+END_SRC
