@@ -1,13 +1,16 @@
-#+CAPTION: Caption
-#+NAME:   fig:SED-HR4049
-[[./UPR.jpg]]
+#+BEGIN_EXPORT latex
+\begin{figure}
+\centering
+\includegraphics{UPR.jpg}
+\end{figure}
+#+END_EXPORT
 #+TITLE: Gestión de la información de cuentas de usuarios en la Universidad de Pinar del Río
 #+AUTHOR: Luis Ángel Méndez Gort
-#+LATEX_CLASS: article
+#+LATEX_CLASS: book
 #+ATTR_LATEX: :font cm
+#+LANGUAGE: es
 
-
-* Capítulo 0: Introducción
+* Introducción
 
 ** Introducción
 
@@ -119,14 +122,14 @@ científicos:
 
 El trabajo está estructurado en 4 capítulos:
 
-*** Capítulo 0: Introducción.
+*** Capítulo 1: Introducción.
 
 Introducción al trabajo. En él se da un panorama histórico
 del origen del problema, se define la situación problémica,
 se definen los métodos científicos y la estructura del 
 trabajo.
 
-*** Capítulo 1: Contextualización de la Dirección de Informatización de la Universidad de Pinar del Río.
+*** Capítulo 2: Contextualización de la Dirección de Informatización de la Universidad de Pinar del Río.
 
 En este capítulo se realiza una descripción concisa del funcionamiento
 de la Dirección de Informatización de la Universidad de Pinar del Río,
@@ -138,7 +141,7 @@ software. Además se elige, entre un conjunto amplio de herramientas
 útiles para realizar este trabajo, la más adecuada; justificando cada
 decisión.
 
-*** Capítulo 2: Modelo del dominio y sistema
+*** Capítulo 3: Modelo del dominio y sistema
 
 En este capítulo se trata el modelo de dominio y sistema,
 describiéndose los artefactos de la metodología seleccionada. En el
@@ -150,13 +153,13 @@ principales casos de uso. Finalmente se hace un análisis de
 factibilidad incluyendo la estimación del costo de desarrollar el
 software.
 
-*** Capítulo 3: Descripción de la solución propuesta
+*** Capítulo 4: Descripción de la solución propuesta
 
 En este capítulo se realizarán diagramas como el diagrama de
 secuencia, que proporciona un análisis detallado de cada caso de uso,
 el de clases, el de implementación y el de despliegue.
 
-* Capítulo 1: Contextualización de la Dirección de Informatización de la Universidad de Pinar del Río
+* Contextualización de la Dirección de Informatización de la Universidad de Pinar del Río
 
 La Dirección de Informatización de la Universidad de Pinar del 
 Río se encarga de la administración e implementación de los 
@@ -315,7 +318,7 @@ incluye aspectos conceptuales como procesos, funciones del sistema;
 además de aspectos concretos como código en un lenguaje de
 programación y esquemas de bases de datos [Wikipedia].
 
-* TODO Capítulo 2 Modelo del Dominio y Sistema
+* TODO Modelo del Dominio y Sistema
 ** Introducción
 En este capítulo se define el modelo de dominio y sistema acorde con
 la metodología ágil XP. En el modelo de dominio se definen las
@@ -327,23 +330,23 @@ funcionales.
 ** Dominio
 
 *** Entidades y conceptos principales
-Departamento: Es la entidad donde se realizan los procesos descritos
-en este trabajo.
-Usuario: Es la persona que interactúa con el programa implementado
-como parte de este trabajo.
-Administrador: Es la persona que se encarga de mantener el programa
-funcionando y registrar sus usarios.
-Sincronización: Es el proceso en el cual los datos no presentes en
-ASSET y SIGENU pasan al directorio activo.
-Directorio Activo: Servidor dedicado a autenticar a los usuarios
-en la red de la Universidad de Pinar del Río.
-Origen de datos: Bases de datos a las cuales los datos de los
-usuarios de la Universidad de Pinar del Río son originalmente
-introducidos.
-Destino de datos: Base de datos usada para autenticar usuarios
-(Directorio Activo).
-Software: Solución desarrollada para el problema expuesto en
-este trabajo.
+- /Departamento/: Es la entidad donde se realizan los procesos
+	descritos en este trabajo.
+- /Usuario/: Es la persona que interactúa con el programa implementado
+	como parte de este trabajo.
+- /Administrador/: Es la persona que se encarga de mantener el programa
+	funcionando y registrar sus usarios.
+- /Sincronización/: Es el proceso en el cual los datos no presentes en
+	ASSET y SIGENU pasan al directorio activo.
+- /Directorio Activo/: Servidor dedicado a autenticar a los usuarios
+	en la red de la Universidad de Pinar del Río.
+- /Origen de datos/: Bases de datos a las cuales los datos de los
+	usuarios de la Universidad de Pinar del Río son originalmente
+	introducidos.
+- /Destino de datos/: Base de datos usada para autenticar usuarios
+	(Directorio Activo).
+- /Software/: Solución desarrollada para el problema expuesto en
+	este trabajo.
 
 *** Reglas del negocio a considerar
 
@@ -366,5 +369,5 @@ las siguientes.
 *** Requisitos no funcionales
 *** Diagrama de funcionalidades
 		
-* TODO Capítulo 3
+* TODO 4
 
